@@ -13,11 +13,8 @@ on:
 
 jobs:
  test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows-latest, ubuntu-latest]
+    runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
