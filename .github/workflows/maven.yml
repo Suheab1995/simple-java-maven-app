@@ -44,11 +44,7 @@ jobs:
     - name: 🔎 Check IP
       run: curl https://api.ipify.org  
       
-    - name: Deploy to my EC2 instance
-      uses: easingthemes/ssh-deploy@v2.1.5
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-        SOURCE: "./"
-        REMOTE_HOST: "ec2-52-66-251-53.ap-south-1.compute.amazonaws.com"
-        REMOTE_USER: "ec2-user" 
-    
+    - name: Pull Docker Image
+      run: docker pull ${{secrets.DOCKERHUB_USERNAME}}/demo_123:latest
+       
+
