@@ -46,5 +46,7 @@ jobs:
       
     - name: Pull Docker Image
       run: docker pull ${{secrets.DOCKERHUB_USERNAME}}/demo_123:latest
+    - name: Run the conatiner
+      run: docker run -it --name samplecont -p 8080:8080 suheab/demo_123:latest /bin/bash
        
 
