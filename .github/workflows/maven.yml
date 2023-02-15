@@ -50,6 +50,5 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
         SOURCE: "./"
         REMOTE_HOST: "ec2-52-66-251-53.ap-south-1.compute.amazonaws.com"
-        REMOTE_USER: "ec2-user"
-      run: ls -la  
+        REMOTE_USER: "ec2-user" 
     
