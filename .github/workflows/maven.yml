@@ -24,4 +24,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Generate Cucumber reports
-      run:  mvn --batch-mode verify
+      run:  mvn build
